@@ -11,6 +11,9 @@
 		EDB7C5A82ACE284100B68C26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7C5A72ACE284100B68C26 /* ContentView.swift */; };
 		EDB7C5AA2ACE284200B68C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB7C5A92ACE284200B68C26 /* Assets.xcassets */; };
 		EDB7C5AD2ACE284200B68C26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB7C5AC2ACE284200B68C26 /* Preview Assets.xcassets */; };
+		EDB7C5B52ACE288800B68C26 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = EDB7C5B42ACE288800B68C26 /* Starscream */; };
+		EDB7C5B72ACE28BC00B68C26 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7C5B62ACE28BC00B68C26 /* ChatView.swift */; };
+		EDB7C5BA2ACE296B00B68C26 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7C5B92ACE296B00B68C26 /* WebSocketManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		EDB7C5A72ACE284100B68C26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EDB7C5A92ACE284200B68C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDB7C5AC2ACE284200B68C26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDB7C5B62ACE28BC00B68C26 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		EDB7C5B92ACE296B00B68C26 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB7C5B52ACE288800B68C26 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +57,9 @@
 		EDB7C5A42ACE284100B68C26 /* WebSocketsChat */ = {
 			isa = PBXGroup;
 			children = (
+				EDB7C5B82ACE296000B68C26 /* Managers */,
 				EDB7C5A52ACE284100B68C26 /* WebSocketsChatApp.swift */,
+				EDB7C5B62ACE28BC00B68C26 /* ChatView.swift */,
 				EDB7C5A72ACE284100B68C26 /* ContentView.swift */,
 				EDB7C5A92ACE284200B68C26 /* Assets.xcassets */,
 				EDB7C5AB2ACE284200B68C26 /* Preview Content */,
@@ -65,6 +73,14 @@
 				EDB7C5AC2ACE284200B68C26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDB7C5B82ACE296000B68C26 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EDB7C5B92ACE296B00B68C26 /* WebSocketManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +99,9 @@
 			dependencies = (
 			);
 			name = WebSocketsChat;
+			packageProductDependencies = (
+				EDB7C5B42ACE288800B68C26 /* Starscream */,
+			);
 			productName = WebSocketsChat;
 			productReference = EDB7C5A22ACE284100B68C26 /* WebSocketsChat.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,9 @@
 				Base,
 			);
 			mainGroup = EDB7C5992ACE284100B68C26;
+			packageReferences = (
+				EDB7C5B32ACE288700B68C26 /* XCRemoteSwiftPackageReference "Starscream" */,
+			);
 			productRefGroup = EDB7C5A32ACE284100B68C26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB7C5A82ACE284100B68C26 /* ContentView.swift in Sources */,
+				EDB7C5B72ACE28BC00B68C26 /* ChatView.swift in Sources */,
 				EDB7C5A62ACE284100B68C26 /* WebSocketsChatApp.swift in Sources */,
+				EDB7C5BA2ACE296B00B68C26 /* WebSocketManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDB7C5B32ACE288700B68C26 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDB7C5B42ACE288800B68C26 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB7C5B32ACE288700B68C26 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDB7C59A2ACE284100B68C26 /* Project object */;
 }
